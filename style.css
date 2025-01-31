@@ -248,7 +248,7 @@ button{
   color : #161a1d;
   transform : scale(2)
 }
-.noclick:hover{
+.skiptheclick:hover{
   transform : translate(500px, 0px);
 }
 iframe{
