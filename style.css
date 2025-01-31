@@ -1,0 +1,264 @@
+body{
+  height : 100vh;
+  display : flex;
+  flex-direction : row;
+  justify-content : center;
+  align-items : center;
+  background-color : #161a1d;
+}
+.heartbody{
+/*   height : 100vh; */
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
+  align-items : center;
+  background-color : #161a1d;
+  position :relative;
+}
+.heartbody:hover{
+  transform :scale(1.1);
+}
+@keyframes beating {
+  0%   {transform : scale(1) rotate(45deg)}
+  25%  {transform : scale(1.1) rotate(45deg)}
+  50%  {transform : scale(1) rotate(45deg)}
+  75%  {transform : scale(1.1) rotate(45deg)}
+  100% {transform : scale(1) rotate(45deg)}
+}
+@keyframes beatingtext {
+  0%   {transform : scale(1)}
+  25%  {transform : scale(1.1)}
+  50%  {transform : scale(1) }
+  75%  {transform : scale(1.1)}
+  100% {transform : scale(1)}
+}
+
+.heart{
+  height : 25vh;
+  width : 25vh;
+  position : relative;
+  background-color : red;
+  border-radius : 5%;
+  transform : rotate(45deg);
+  animation : beating 3s infinite;
+   box-shadow: 2vh 2vh 4vh rgba(0, 0, 0, 1);
+}
+.heart::before{
+  content : "";
+  height : 25vh;
+  width : 25vh;
+  left : -50%;
+  position : absolute;
+  background-color : red;
+  border-radius : 100%;
+  transform-origin:center;
+}
+.heart::after{
+  content : "";
+  height : 25vh;
+  width : 25vh;
+  bottom : 50%;
+  position : absolute;
+  background-color : red;
+  transform : rotate(-90deg);
+  border-radius : 100%;
+}
+
+.text{
+  font-family: 'Poppins', sans-serif;
+  color : white;
+  position : relative;
+  top : 15vh;
+  animation : beatingtext 3s infinite linear;
+}
+
+.explosionDiv{
+/*   top : 50vh; */
+  top : 0;
+  left : 0;
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
+  align-items : center;
+  background-color : #161a1d;
+  position : relative;
+  display: none;
+}
+@keyframes explosion{
+  0% {transform-origin : center; }
+  25% {width : 25vh; height : 2vh; transform-origin : center; }
+  50% {width : 50vh; height : 0vh;transform-origin : center; opacity :100}
+  75% {width : 75vh; height : 2vh;transform-origin : center; opacity : 80}
+  100% {width : 100vh; height : 0vh;transform-origin : center; opacity : 0}
+}
+/* @keyframes dot{
+  0% {height : 1vh; width : 1vh;  transform-origin : center;}
+  25% {height : 2vh; width : 2vh;  transform-origin : center;}
+  50% { transform-origin : center;}
+  75% {height : 3vh; width : 3vh;  transform-origin : center;}
+  100% { transform-origin : center;}
+} */
+.firework{
+  transform : rotate(45deg);
+  position : relative;
+  height : 5px;
+  width : 0px;
+  border-radius : 100%;
+  background-color : yellow;
+  transform-origin: top;
+  animation : explosion 1s linear;
+  box-shadow: 2vh 1vh 4vh rgba(250, 250, 0, 1);
+}
+.firework2{
+  transform : rotate(90deg);
+  position : absolute;
+  height : 5px;
+  width : 0px;
+  background-color : red;
+  border-radius : 100%;
+  animation : explosion 1s linear;
+  box-shadow: 2vh 1vh 4vh rgba(250, 0, 0, 1);
+}
+.firework3{
+  transform : rotate(135deg);
+  position : absolute;
+  height : 5px;
+  width : 0px;
+  background-color : green;
+  border-radius : 100%;
+  animation : explosion 1s linear;
+  box-shadow: 2vh 1vh 4vh rgba( 0, 250, 0, 1);
+}
+.firework4{
+  position : absolute;
+  height : 5px;
+  width : 0px;
+  background-color : blue;
+  border-radius : 100%;
+  animation : explosion 1s linear;
+  box-shadow: 2vh 1vh 4vh rgba(0, 0, 250, 1);
+}
+.firework5{
+  transform : rotate(22.5deg);
+  position : absolute;
+  height : 5px;
+  width : 0px;
+  background-color : orange;
+  border-radius : 100%;
+  animation : explosion 1s linear;
+  box-shadow: 2vh 1vh 4vh rgba(250, 100, 0, 1);
+}
+.firework6{
+  transform : rotate(67.5deg);
+  position : absolute;
+  height : 5px;
+  width : 0px;
+  background-color : violet;
+  border-radius : 100%;
+  animation : explosion 1s linear;
+  box-shadow: 2vh 1vh 4vh rgba(238, 130, 238, 1);
+}
+.firework7{
+  transform : rotate(157.5deg);
+  position : absolute;
+  height : 5px;
+  width : 0px;
+  background-color : pink;
+  border-radius : 100%;
+  animation : explosion 1s linear;
+  box-shadow: 2vh 1vh 4vh rgba(255, 192, 203, 1);
+}
+.firework8{
+  transform : rotate(112.5deg);
+  position : absolute;
+  height : 5px;
+  width : 0px;
+  background-color : cyan;
+  border-radius : 100%;
+  animation : explosion 1s linear;
+  box-shadow: 2vh 1vh 4vh rgba(0, 255, 255, 1);
+}
+.SweetText{
+  display :flex;
+  flex-direction : column;
+  justify-content : center;
+  align-items : center;
+  gap : 10px;
+  font-family: 'Poppins', sans-serif;
+  color : white;
+  width : 200px;
+  text-align : center;
+  top: -300px;
+  right : -100px;
+  position : absolute;
+  animation : sweettext 8s linear;
+  font-size :20px;
+  opacity : 0;
+}
+
+@keyframes sweettext {
+  0% {
+    opacity : 0;
+  }
+  20% {
+    opacity : 0;
+  }
+  40% {
+    opacity : 1;
+  }
+  60% {
+    opacity : 1;
+  }
+  80% {
+    opacity : 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes ask{
+  0% {opacity : 0}
+  100% {opacity : 100}
+}
+.Ask{
+  display : none;
+  font-family: 'Poppins', sans-serif;
+  color : white;
+  position : absolute;
+  font-size :20px;
+  animation : ask 2s linear;
+}
+.AskButtons{
+  display : flex;
+  justify-content : center;
+  margin : 30px;
+  gap : 5px;
+}
+button{
+  padding : 5px;
+  border-radius : 10px;
+  background-color : #161a1d;
+  border-color: white;
+  font-family: 'Poppins', sans-serif;
+  color : white;
+}
+.click:hover{
+  border : none;
+  background-color : white;
+  color : #161a1d;
+  transform : scale(2)
+}
+.noclick:hover{
+  transform : translate(100vh, 0vh);
+}
+iframe{
+  border : none;
+  border-radius : 10px;
+}
+.saidYes{
+  display : none;
+  font-family: 'Poppins', sans-serif;
+  color : white;
+  animation : sweettext 6s linear;
+  font-size : 20px;
+}
