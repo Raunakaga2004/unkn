@@ -249,7 +249,7 @@ button{
   transform : scale(2)
 }
 .noclick:hover{
-  transform : translate(100vh, 0vh);
+  transform : scale(0);
 }
 iframe{
   border : none;
