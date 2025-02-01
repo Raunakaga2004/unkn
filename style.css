@@ -248,8 +248,8 @@ button{
   color : #161a1d;
   transform : scale(2)
 }
-.skiptheclick:hover{
-  transform : scale(0);
+.noclick:hover{
+  transform : translate(100vh, 0vh);
 }
 iframe{
   border : none;
@@ -257,8 +257,16 @@ iframe{
 }
 .saidYes{
   display : none;
+  flex-direction : column;
+  justify-content : center;
+  align-items : center;
+  gap : 20px;
   font-family: 'Poppins', sans-serif;
   color : white;
-  animation : sweettext 6s linear;
+  animation : saidYes 6s linear;
   font-size : 20px;
+}
+@keyframes saidYes{
+  0% {opacity : 0}
+  50% {opacity : 100}
 }
