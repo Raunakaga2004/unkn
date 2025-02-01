@@ -11,7 +11,4 @@ function handleClick(){
 function done(){
   document.querySelector(".Ask").style.display="none";
   document.querySelector(".saidYes").style.display="block";
-  setTimeout(()=>{
-    document.querySelector(".saidYes").style.display ="none";
-  }, 6000)
 }
